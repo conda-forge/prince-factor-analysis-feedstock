@@ -1,5 +1,5 @@
 {% set name = "prince" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.3" %}
 
 package:
   name: "{{ name|lower }}-factor-analysis"
