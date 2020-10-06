@@ -5,7 +5,7 @@ Home: https://github.com/MaxHalford/prince
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Statistical factor analysis in Python
 
