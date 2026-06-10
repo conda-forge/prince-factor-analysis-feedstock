@@ -1,35 +1,39 @@
 {% set name = "prince" %}
-{% set version = "0.7.1" %}
+{% set version = "0.19.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}-factor-analysis
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b3dadbea7708c9f9b0cfa090d1380f989bcecf709bceb3a2c3c202df40b7f9b0
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4f1f59b8b441be7413e2a0c690b3da1cc8b44386a84b82e1f40a7ddad3bae188
 
 build:
   noarch: python
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
 requirements:
   host:
+    - python {{ python_min }}
     - pip
-    - python >=3.0
     - setuptools
-
   run:
-    - matplotlib-base >=3.0.2
-    - numpy >=1.16.1
-    - pandas >=0.24.0
-    - python >=3.0
-    - scikit-learn >=0.20.1
-    - scipy >=1.1.0
+    - python >={{ python_min }}
+    - altair >=5.0.0
+    - pandas >=2.2.0
+    - scikit-learn >=1.5.1
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - prince
+  commands:
+    - pip check
 
 about:
   home: https://github.com/MaxHalford/prince
@@ -37,7 +41,7 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: Statistical factor analysis in Python
-  doc_url: https://pypi.org/project/prince/
+  doc_url: https://github.com/MaxHalford/prince
   dev_url: https://github.com/MaxHalford/prince
 
 extra:
@@ -46,3 +50,4 @@ extra:
     - mwilson8
     - rluria14
     - benhuff
+    - MaxHalford
