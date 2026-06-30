@@ -1,5 +1,5 @@
 {% set name = "prince" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}-factor-analysis
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4f1f59b8b441be7413e2a0c690b3da1cc8b44386a84b82e1f40a7ddad3bae188
+  sha256: a35e3048f9b756d1fab16c6beaddc4ded604d70481947a488da753beae755263
 
 build:
   noarch: python
