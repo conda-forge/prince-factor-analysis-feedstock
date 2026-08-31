@@ -1,13 +1,13 @@
 {% set name = "prince" %}
-{% set version = "0.20.1" %}
+{% set version = "0.20.2" %}
 
 package:
   name: {{ name|lower }}-factor-analysis
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8493bad93c0d6202134d87b2a08e10eacd9d51d143eeadd6ea510de7174bfc10
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 1e39f1b149ddaa5ac4d57f6a6e1858c1e6af4c75b3b811d9820f2812c2784891
 
 build:
   noarch: python
