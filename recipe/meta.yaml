@@ -1,5 +1,5 @@
 {% set name = "prince" %}
-{% set version = "0.20.2" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name|lower }}-factor-analysis
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1e39f1b149ddaa5ac4d57f6a6e1858c1e6af4c75b3b811d9820f2812c2784891
+  sha256: 08d9414380166a7cc2af43c01c4dd301ee8b35527b0ad4bf43533ee13a3cb2d9
 
 build:
   noarch: python
